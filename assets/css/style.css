@@ -2,20 +2,24 @@
 
 html,
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
 }
 
 header {
-    background-color: darkolivegreen;
-    color: beige;
-    text-align: center;
-    box-shadow: 0 5px 8px 0 gray;
-    padding: 10px;
-    margin-bottom: 20px;
+	background-color: darkolivegreen;
+	color: beige;
+	text-align: center;
+	box-shadow: 0 5px 8px 0 gray;
+	padding: 10px;
+	margin-bottom: 20px;
 }
 
 header h1 {
-    text-shadow: 4px 4px 8px black;
+	text-shadow: 4px 4px 8px black;
 }
 
 .quotation {
@@ -31,16 +35,73 @@ blockquote p {
 }
 
 .image {
-    width: 50%;
-    box-shadow: 4px 4px 8px 5px gray, -4px -4px 8px 5px gray;
-    margin: 0 auto;
+	width: 70%;
+	box-shadow:
+		4px 4px 8px 5px gray,
+		-4px -4px 8px 5px gray;
+	margin: 0 auto;
 }
 
 .image img {
-    width: 60%;
-    border-radius: 50%;
+	width: 40%;
+	border-radius: 50%;
+	display: block;
 }
 
 .image img:hover {
-    border-radius: 0;
+	border-radius: 0;
+}
+
+/*Modifica comportamento proprietà display*/
+
+.mainContent section {
+	display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.mainContent section h2 {
+    text-align: center;
+}
+
+.mainContent section:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.news {
+	width: 23%;
+}
+
+.principal {
+	width: 59%;
+}
+
+.social {
+	width: 14%;
+}
+
+.description img {
+    width: 15%;
+    margin: 10px;
+}
+
+.description img:first-child {
+    float: right;
+}
+
+.description img:last-child {
+    float: left;
+}
+
+.list ul li::before {
+    content: 'Studente ';
+    font-weight: bold;
+}
+
+.list ul li::after {
+    content: ' ✅';
+}
+
+section span {
+    color: red;
 }
